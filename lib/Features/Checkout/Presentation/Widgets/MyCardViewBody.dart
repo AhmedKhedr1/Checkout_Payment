@@ -35,6 +35,8 @@ class MyCardViewBody extends StatelessWidget {
           ),
           Divider(
             height: 34,
+            endIndent: 15,
+            indent: 15,
             thickness: 2,
             color: Color(0xffC7C7C7),
           ),

@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Customappbar extends StatelessWidget {
-  const Customappbar({super.key});
-
+  const Customappbar({super.key, required this.title, this.width});
+final String title;
+final double? width;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -13,10 +14,10 @@ class Customappbar extends StatelessWidget {
         children: [
           SvgPicture.asset('assets/images/arrow.svg'),
           SizedBox(
-            width: 97,
+            width:width==null? 97:width,
           ),
           Text(
-            'My Cart',
+            title,
             style: Styless.style25,
           )
         ],
