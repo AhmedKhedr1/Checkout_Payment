@@ -1,4 +1,4 @@
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/CustomappBar.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/payment_details_viewBody.dart';
 import 'package:flutter/material.dart';
 
 class Paymentdetails extends StatelessWidget {
@@ -7,14 +7,8 @@ class Paymentdetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Customappbar(
-            title: 'Payment Details',
-            width: 48,
-          ),
-        ],
-      ),
+      backgroundColor: Color(0xffFFFFFF),
+      body: PaymentDetailsViewbody()
     );
   }
 }

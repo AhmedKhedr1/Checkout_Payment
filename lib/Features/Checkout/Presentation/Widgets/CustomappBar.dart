@@ -4,8 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class Customappbar extends StatelessWidget {
   const Customappbar({super.key, required this.title, this.width});
-final String title;
-final double? width;
+  final String title;
+  final double? width;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,7 +14,7 @@ final double? width;
         children: [
           SvgPicture.asset('assets/images/arrow.svg'),
           SizedBox(
-            width:width==null? 97:width,
+            width: width == null ? 97 : width,
           ),
           Text(
             title,
