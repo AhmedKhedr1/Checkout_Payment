@@ -1,4 +1,6 @@
+import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/CustomButton.dart';
 import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/CustomappBar.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/CustomcCeditCard.dart';
 import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/PaymentMethods.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +18,15 @@ class PaymentDetailsViewbody extends StatelessWidget {
         SizedBox(
           height: 32,
         ),
-        PaymentMethods()
+        PaymentMethods(),
+        CustomcCeditCard(),
+        SizedBox(
+          height: 30,
+        ),
+        Custombutton(
+          title: 'Pay',
+          onTap: () {},
+        )
       ],
     );
   }
