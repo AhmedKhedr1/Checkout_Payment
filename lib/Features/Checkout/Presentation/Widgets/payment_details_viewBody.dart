@@ -9,25 +9,27 @@ class PaymentDetailsViewbody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Customappbar(
-          title: 'Payment Details',
-          width: 48,
-        ),
-        SizedBox(
-          height: 32,
-        ),
-        PaymentMethods(),
-        CustomcCeditCard(),
-        SizedBox(
-          height: 30,
-        ),
-        Custombutton(
-          title: 'Pay',
-          onTap: () {},
-        )
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Customappbar(
+            title: 'Payment Details',
+            width: 48,
+          ),
+          SizedBox(
+            height: 32,
+          ),
+          PaymentMethods(),
+          CustomcCeditCard(),
+          SizedBox(
+            height: 30,
+          ),
+          Custombutton(
+            title: 'Pay',
+            onTap: () {},
+          )
+        ],
+      ),
     );
   }
 }
