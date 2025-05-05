@@ -20,9 +20,10 @@ class PaymentDetailsViewbody extends StatelessWidget {
             height: 32,
           ),
           PaymentMethods(),
+          SizedBox(height: 10,),
           CustomcCeditCard(),
           SizedBox(
-            height: 30,
+            height: 100,
           ),
           Custombutton(
             title: 'Pay',

@@ -13,19 +13,26 @@ class Mycartview extends StatelessWidget {
       backgroundColor: Color(0xffFFFFFF),
       body: Column(
         children: [
-          Customappbar(title: 'My Cart',),
+          Customappbar(
+            title: 'My Cart',
+          ),
           SizedBox(height: 25),
           MyCardViewBody(),
           SizedBox(
-            height: 16,
+            height: 30,
           ),
           Custombutton(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return Paymentdetails();
-              },));
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return Paymentdetails();
+                },
+              ));
             },
             title: 'Complete Payment',
+          ),
+          SizedBox(
+            height: 12,
           )
         ],
       ),
