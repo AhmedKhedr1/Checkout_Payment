@@ -12,7 +12,9 @@ class Customappbar extends StatelessWidget {
       padding: const EdgeInsets.only(top: 60, left: 20),
       child: Row(
         children: [
-          SvgPicture.asset('assets/images/arrow.svg'),
+          GestureDetector(
+              onTap: Navigator.of(context).pop,
+              child: SvgPicture.asset('assets/images/arrow.svg')),
           SizedBox(
             width: width == null ? 97 : width,
           ),

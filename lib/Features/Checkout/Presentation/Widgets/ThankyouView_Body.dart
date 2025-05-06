@@ -1,3 +1,4 @@
+import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/Custom_shaped_container.dart';
 import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/CustomappBar.dart';
 import 'package:flutter/material.dart';
 
@@ -7,7 +8,11 @@ class ThankyouviewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [Customappbar(title: '')],
+      children: [
+        Customappbar(title: ''),
+        SizedBox(height: 20,),
+        CustomShapedContainer(),
+      ],
     );
   }
 }
