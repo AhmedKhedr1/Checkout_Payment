@@ -1,12 +1,20 @@
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Thankyou_View.dart';
 import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/CustomButton.dart';
 import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/CustomappBar.dart';
 import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/CustomcCeditCard.dart';
 import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/PaymentMethods.dart';
 import 'package:flutter/material.dart';
 
-class PaymentDetailsViewbody extends StatelessWidget {
+class PaymentDetailsViewbody extends StatefulWidget {
   const PaymentDetailsViewbody({super.key});
 
+  @override
+  State<PaymentDetailsViewbody> createState() => _PaymentDetailsViewbodyState();
+}
+
+class _PaymentDetailsViewbodyState extends State<PaymentDetailsViewbody> {
+  final GlobalKey<FormState> formKey = GlobalKey();
+  AutovalidateMode autoValidateMode = AutovalidateMode.disabled;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -20,14 +28,31 @@ class PaymentDetailsViewbody extends StatelessWidget {
             height: 32,
           ),
           PaymentMethods(),
-          SizedBox(height: 10,),
-          CustomcCeditCard(),
           SizedBox(
-            height: 100,
+            height: 10,
+          ),
+          CustomcCeditCard(
+            formKey: formKey,
+            autovalidateMode: autoValidateMode,
+          ),
+          SizedBox(
+            height: 80,
           ),
           Custombutton(
             title: 'Pay',
-            onTap: () {},
+            onTap: () {
+              if (formKey.currentState!.validate()) {
+                formKey.currentState!.save();
+              } else {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return ThankyouView();
+                  },
+                ));
+                autoValidateMode = AutovalidateMode.always;
+                setState(() {});
+              }
+            },
           )
         ],
       ),

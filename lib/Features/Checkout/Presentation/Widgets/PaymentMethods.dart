@@ -12,7 +12,6 @@ class _PaymentMethodsState extends State<PaymentMethods> {
   final List<String> PaymentMethodsitem = const [
     'assets/images/card.svg',
     'assets/images/paypal.svg',
-    'assets/images/paypal.svg',
   ];
   int activeindex = 0;
   @override

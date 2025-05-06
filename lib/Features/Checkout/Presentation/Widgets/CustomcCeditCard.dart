@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 
 class CustomcCeditCard extends StatefulWidget {
-  const CustomcCeditCard({super.key});
+  const CustomcCeditCard({super.key, required this.formKey, required this.autovalidateMode});
+  final GlobalKey<FormState> formKey;
+  final AutovalidateMode autovalidateMode; 
 
   @override
   State<CustomcCeditCard> createState() => _CustomcCeditCardState();
@@ -11,13 +13,13 @@ class CustomcCeditCard extends StatefulWidget {
 class _CustomcCeditCardState extends State<CustomcCeditCard> {
   String cardNumber = '', expiryDate = '', cardHolderName = '', cvvCode = '';
   bool showBackView = false;
-  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         CreditCardWidget(
+          
           cardNumber: cardNumber,
           expiryDate: expiryDate,
           cardHolderName: cardHolderName,
@@ -27,6 +29,7 @@ class _CustomcCeditCardState extends State<CustomcCeditCard> {
           onCreditCardWidgetChange: (p0) {},
         ),
         CreditCardForm(
+          autovalidateMode: widget.autovalidateMode,
             cardNumber: cardNumber,
             expiryDate: expiryDate,
             cardHolderName: cardHolderName,
@@ -39,7 +42,7 @@ class _CustomcCeditCardState extends State<CustomcCeditCard> {
               showBackView = CreditCardModel.isCvvFocused;
               setState(() {});
             },
-            formKey: formKey)
+            formKey: widget.formKey)
       ],
     );
   }
