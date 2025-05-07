@@ -10,7 +10,9 @@ class ThankyouviewBody extends StatelessWidget {
     return Column(
       children: [
         Customappbar(title: ''),
-        SizedBox(height: 20,),
+        SizedBox(
+          height: 20,
+        ),
         CustomShapedContainer(),
       ],
     );
