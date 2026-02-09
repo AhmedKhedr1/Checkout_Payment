@@ -1,3 +1,4 @@
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/PaymentDetails.dart';
 import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/CustomButton.dart';
 import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/PaymentMethods.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,13 @@ class PaymentMethodBottomSheet extends StatelessWidget {
           ),
           Custombutton(
             title: 'Continue',
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return Paymentdetails();
+                },
+              ));
+            },
           ),
           SizedBox(
             height: 12,
