@@ -1,6 +1,6 @@
 import 'package:checkout_payment/Features/Checkout/Presentation/Views/PaymentDetails.dart';
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/CustomButton.dart';
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/PaymentMethods.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/CustomButton.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/PaymentMethods.dart';
 import 'package:flutter/material.dart';
 
 class PaymentMethodBottomSheet extends StatelessWidget {

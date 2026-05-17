@@ -1,8 +1,7 @@
-import 'package:checkout_payment/Features/Checkout/Presentation/Views/PaymentDetails.dart';
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/CustomButton.dart';
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/CustomappBar.dart';
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/MyCardViewBody.dart';
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/PaymentMethodBottomSheet.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/CustomButton.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/CustomappBar.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/MyCardViewBody.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/PaymentMethodBottomSheet.dart';
 import 'package:flutter/material.dart';
 
 class Mycartview extends StatelessWidget {

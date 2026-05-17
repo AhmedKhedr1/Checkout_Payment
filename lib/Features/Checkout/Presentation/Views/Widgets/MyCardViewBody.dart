@@ -1,5 +1,5 @@
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/OrderInfoItem.dart';
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/TotalPrice.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/OrderInfoItem.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/TotalPrice.dart';
 import 'package:flutter/material.dart';
 
 class MyCardViewBody extends StatelessWidget {

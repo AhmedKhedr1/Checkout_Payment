@@ -1,4 +1,4 @@
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/payment_details_viewBody.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/payment_details_viewBody.dart';
 import 'package:flutter/material.dart';
 
 class Paymentdetails extends StatelessWidget {

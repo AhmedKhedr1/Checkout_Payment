@@ -1,5 +1,5 @@
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/Custom_shaped_container.dart';
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/CustomappBar.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/Custom_shaped_container.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/CustomappBar.dart';
 import 'package:flutter/material.dart';
 
 class ThankyouviewBody extends StatelessWidget {

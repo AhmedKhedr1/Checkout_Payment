@@ -1,7 +1,7 @@
 import 'package:checkout_payment/Core/utils/Styless.dart';
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/Cardinfowidget.dart';
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/TotalPrice.dart';
-import 'package:checkout_payment/Features/Checkout/Presentation/Widgets/payment_item_info.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/Cardinfowidget.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/TotalPrice.dart';
+import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/payment_item_info.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
