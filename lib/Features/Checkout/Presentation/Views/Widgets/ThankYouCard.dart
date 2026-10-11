@@ -61,7 +61,7 @@ class ThankYouCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(
+                FaIcon(
                   FontAwesomeIcons.barcode,
                   size: 64,
                 ),

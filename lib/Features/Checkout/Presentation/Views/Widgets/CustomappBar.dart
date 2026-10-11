@@ -16,7 +16,7 @@ class Customappbar extends StatelessWidget {
               onTap: Navigator.of(context).pop,
               child: SvgPicture.asset('assets/images/arrow.svg')),
           SizedBox(
-            width: width == null ? 97 : width,
+            width: width ?? 97,
           ),
           Text(
             title,
