@@ -1,4 +1,3 @@
-
 import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/Custom_check_icon.dart';
 import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/Custom_dashed_line.dart';
 import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/ThankYouCard.dart';

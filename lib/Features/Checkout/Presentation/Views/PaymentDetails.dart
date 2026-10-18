@@ -7,8 +7,6 @@ class Paymentdetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFFFFFF),
-      body: PaymentDetailsViewbody()
-    );
+        backgroundColor: Color(0xffFFFFFF), body: PaymentDetailsViewbody());
   }
 }

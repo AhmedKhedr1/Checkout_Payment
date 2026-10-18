@@ -8,7 +8,7 @@ abstract class Styless {
     fontWeight: FontWeight.w500,
     height: 0,
   );
-   static TextStyle style22 = TextStyle(
+  static TextStyle style22 = TextStyle(
     color: Colors.black,
     fontSize: 22,
     fontFamily: 'Inter',

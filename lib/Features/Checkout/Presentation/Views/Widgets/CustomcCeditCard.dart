@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 
 class CustomcCeditCard extends StatefulWidget {
-  const CustomcCeditCard({super.key, required this.formKey, required this.autovalidateMode});
+  const CustomcCeditCard(
+      {super.key, required this.formKey, required this.autovalidateMode});
   final GlobalKey<FormState> formKey;
-  final AutovalidateMode autovalidateMode; 
+  final AutovalidateMode autovalidateMode;
 
   @override
   State<CustomcCeditCard> createState() => _CustomcCeditCardState();
@@ -19,7 +20,6 @@ class _CustomcCeditCardState extends State<CustomcCeditCard> {
     return Column(
       children: [
         CreditCardWidget(
-          
           cardNumber: cardNumber,
           expiryDate: expiryDate,
           cardHolderName: cardHolderName,
@@ -29,7 +29,7 @@ class _CustomcCeditCardState extends State<CustomcCeditCard> {
           onCreditCardWidgetChange: (p0) {},
         ),
         CreditCardForm(
-          autovalidateMode: widget.autovalidateMode,
+            autovalidateMode: widget.autovalidateMode,
             cardNumber: cardNumber,
             expiryDate: expiryDate,
             cardHolderName: cardHolderName,
