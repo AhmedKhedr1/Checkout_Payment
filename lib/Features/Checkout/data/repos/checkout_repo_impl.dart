@@ -23,8 +23,7 @@ class CheckoutRepoImpl implements CheckoutRepo {
       print('Status: ${e.response?.statusCode}');
       print('Body: ${e.response?.data}');
       return left(ServerFailure(
-          errMessage: e.response?.data?['error']?['message'] ??
-              e.toString()));
+          errMessage: e.response?.data?['error']?['message'] ?? e.toString()));
     } catch (e) {
       return left(ServerFailure(errMessage: e.toString()));
     }
