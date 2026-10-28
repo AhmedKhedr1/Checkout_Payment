@@ -93,7 +93,6 @@ class PaymentIntentModel {
       amountReceived: json['amount_received'] as int?,
       application: json['application'] as dynamic,
       applicationFeeAmount: json['application_fee_amount'] as dynamic,
-
       canceledAt: json['canceled_at'] as dynamic,
       cancellationReason: json['cancellation_reason'] as dynamic,
       captureMethod: json['capture_method'] as String?,
