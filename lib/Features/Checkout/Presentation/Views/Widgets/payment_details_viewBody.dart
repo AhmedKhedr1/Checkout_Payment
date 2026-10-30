@@ -27,7 +27,7 @@ class _PaymentDetailsViewbodyState extends State<PaymentDetailsViewbody> {
           SizedBox(
             height: 32,
           ),
-          PaymentMethods(),
+      //    PaymentMethods(updatePaymentMethod: (int index) {  },),
           SizedBox(
             height: 10,
           ),
