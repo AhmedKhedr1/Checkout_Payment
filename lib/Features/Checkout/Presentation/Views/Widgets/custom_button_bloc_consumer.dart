@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:checkout_payment/Core/utils/api_keys.dart';
 import 'package:checkout_payment/Features/Checkout/Presentation/Views/Thankyou_View.dart';
 import 'package:checkout_payment/Features/Checkout/Presentation/Views/Widgets/CustomButton.dart';
@@ -14,7 +16,9 @@ import 'package:flutter_paypal_payment/flutter_paypal_payment.dart';
 class CustomButtonBlocConsumer extends StatelessWidget {
   const CustomButtonBlocConsumer({
     super.key,
+    required this.isPaypal,
   });
+  final bool isPaypal;
 
   @override
   Widget build(BuildContext context) {
@@ -37,23 +41,29 @@ class CustomButtonBlocConsumer extends StatelessWidget {
           isLoading: state is PaymentLoading ? true : false,
           title: 'Continue',
           onTap: () {
-           // confirmPaypalPayment(context);
-            PaymentIntentInputModel paymentIntentInputModel =
-                PaymentIntentInputModel(
-              amount: '100',
-              currency: 'USD',
-              customerId: 'cus_VWWEwbEwx6t6H3',
-            );
-            BlocProvider.of<PaymentCubit>(context)
-                .makePayment(paymentIntentInputModel: paymentIntentInputModel);
+            if (isPaypal) {
+              excutePaypalPayment(context);
+            } else {
+              excuteStripePayment(context);
+            }
           },
         );
       },
     );
   }
+
+  void excuteStripePayment(BuildContext context) {
+    PaymentIntentInputModel paymentIntentInputModel = PaymentIntentInputModel(
+      amount: '100',
+      currency: 'USD',
+      customerId: 'cus_VWWEwbEwx6t6H3',
+    );
+    BlocProvider.of<PaymentCubit>(context)
+        .makePayment(paymentIntentInputModel: paymentIntentInputModel);
+  }
 }
 
-void confirmPaypalPayment(BuildContext context) {
+void excutePaypalPayment(BuildContext context) {
   var amount = Amount(
       currency: 'USD',
       details: Details(shipping: '0', shippingDiscount: '0', subtotal: '100'),
@@ -78,8 +88,16 @@ void confirmPaypalPayment(BuildContext context) {
       note: "Contact us for any questions on your order.",
       onSuccess: (Map params) async {
         print("onSuccess: $params");
+        Navigator.pushReplacement(context, MaterialPageRoute(
+          builder: (context) {
+            return ThankyouView();
+          },
+        ));
       },
       onError: (error) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text(error.errorMessage),
+        ));
         print("onError: $error");
         Navigator.pop(context);
       },
